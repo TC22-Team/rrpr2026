@@ -1,0 +1,14 @@
+title: "RRPR 2026"
+description: "Sixth Workshop on Reproducible Research in Pattern Recognition"
+baseurl: ""
+url: "https://TC22-Team.github.io/rrpr2026"
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  pages:
+    output: true
