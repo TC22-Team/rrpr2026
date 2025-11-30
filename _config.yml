@@ -1,10 +1,10 @@
 url: "https://TC22-Team.github.io/rrpr2026"
+baseurl: ""
 plugins: #[]
    - jekyll-seo-tag
 sass:
   sass_dir: _sass
   style: expanded
-
 
 
 
