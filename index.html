@@ -50,14 +50,15 @@ Following the success of the five first éditions, we propose the 6th edition of
   
 
 
+  <div class="row">
 
-
+<div class="col-lg-6 ">
 
 <h2> Important Dates</h2>
 
 <h3>Main paper Deadlines</h3>
 <ul>
-<li> Workshop paper submission deadline:  April 31, 2026</li>
+<li> Workshop paper submission deadline:  April 30, 2026</li>
 <li> Notification to authors: June 15, 2026 </li>
 <li> Deadline for draft papers to be distributed at the workshop :  June 27, 2026</li>
 </ul>
@@ -70,7 +71,24 @@ Following the success of the five first éditions, we propose the 6th edition of
 <li> Notification to authors: June 15, 2026 </li>
 <li> Deadline for draft papers to be distributed at the workshop :  June 14, 2026</li>
 </ul>
+</div>
 
+<div class="col-lg-6 ">
+  <section id="news" class="news-panel">
+       <h2>Latest News</h2>
+       <div class="news-list">
+    {% for post in site.posts limit:2 %}
+      <article class="news-item">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="news-date">{{ post.date | date: "%d %B %Y" }}</p>
+        <p>{{ post.excerpt  | truncatewords: 25 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  <p class="more-news"><a href="/news.html">See all news →</a></p>
+</section>
+</div>
+</div>
 
 <h2>Sponsors and Endorsements</h2>
 

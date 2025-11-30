@@ -117,7 +117,7 @@ footer {
 
 .news-panel h2 {
   font-size: 1.8rem;
-  color: #BC0028;
+  color: $color-primary;
   margin-bottom: 1.5rem;
   display: inline-block;
   padding-bottom: 0.3rem;
@@ -140,7 +140,7 @@ footer {
 .news-item h3 a {
   display: inline-block; /* ← indispensable */
   text-decoration: none;
-  color: #8d1100;
+  color: #2B6F9B;
   transition: transform 0.5s ease;
 
   &:hover {
@@ -162,7 +162,7 @@ footer {
 }
 
 .news-title:hover {
-  color: #e74c3c;       /* rouge plus vif au survol */
+  color: #2B6FDB;         /* rouge plus vif au survol */
 }
 
 .news-date {
@@ -194,7 +194,7 @@ footer {
 #show-more-news {
   background: none;
   border: none;
-  color: #8d1100;
+  color: #2B6F9B;
   padding: 0.2em 0.4em;
   font-size: 0.85rem;
   cursor: pointer;
@@ -202,7 +202,7 @@ footer {
 
 #show-more-news:hover {
   text-decoration: underline;
-  color: #5d0000;
+  color: #1B5F9B;
 }
 
 #visits-count24h, #visits-count7d{
