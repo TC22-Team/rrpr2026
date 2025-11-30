@@ -1,12 +1,32 @@
-<nav class="menu">
-    <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/committees' | relative_url }}">Committees</a></li>
-        <li><a href="{{ '/submission' | relative_url }}">Submission</a></li>
-        <li><a href="{{ '/program' | relative_url }}">Program</a></li>
-        <li><a href="{{ '/proceedings' | relative_url }}">Proceedings</a></li>
-        <li><a href="{{ '/poster-logo' | relative_url }}">Poster & Logo</a></li>
-        <li><a href="{{ '/previous-editions' | relative_url }}">Previous Editions</a></li>
-        <li><a href="{{ '/news' | relative_url }}">News</a></li>
-    </ul>
+<nav id="navMenu" class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top px-3 mb-4 blurry" aria-label="Main navigation">
+    <a class="navbar-brand d-lg-none" href="/">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle main navigation menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarCollapse">
+        <ul class="navbar-nav mx-lg-auto">
+          <a class="navbar-brand d-none d-lg-block " href="/">Home</a>
+          <li class="nav-item">
+                <a class="nav-link" href="/committee.html">Committee</a>
+            </li>
+            <!-- <li class="nav-item"> -->
+            <!--     <a class="nav-link" href="/submission.html">Important Dates</a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item"> -->
+            <!--     <a class="nav-link" href="/program.html">Program</a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item"> -->
+            <!--     <a class="nav-link" href="/proceedings.html">For Authors</a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item"> -->
+            <!--     <a class="nav-link" href="/posterAndLogo.html">Local Informations</a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item"> -->
+            <!--     <a class="nav-link" href="/previsousEditions.html"> Previous Editions   </a> -->
+            <!-- </li> -->
+
+        </ul>
+    </div>
 </nav>

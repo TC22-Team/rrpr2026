@@ -1,38 +1,53 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} – {{ site.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+   
+    <!-- Open Graph & auto SEO  -->
+    {% seo %}
+
     <!-- Bootstrap 5 CSS -->    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
+    {% if page.canonical %}
+    <link rel="canonical" href="{{ page.canonical }}">
+    {% endif %}
+
+    
+    <link rel="icon" type="image/x-icon" href="/Logos/icprIcon.ico">
+    <link rel="preload" as="image" href="/assets/img/headerBackground.webp">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    
+  </head>
 
 <body>
-    {% include header.html %}   <!-- Bandeau en haut -->
+  <div id="headerSite"></div>
+  {% include header.html %}
+  {% include menu.html %} 
+  <div class="blurrer"></div>
 
-<div class="page-wrapper">
+  <main>
+    <div  class="container px-1 ">    
+          {{ content }}
+    </div>
+    
+  </main>
+  <footer class="container px-1">
+    <div class="last-update"> 
+      last modified : 
+      {{ page.last_modified | date: "%d %B %Y" }}
+    </div>
+  </footer>
 
-    <aside class="sidebar">
-        <div class="sidebar-inner">
-            <div class="sidebar-title">
-                <h2>{{ site.title }}</h2>
-            </div>
-            {% include menu.html %}
-        </div>
-    </aside>
-
-    <main class="main-content">
-        {{ content }}
-    </main>
-
-</div>
-
-<footer class="footer">
-    {% include footer.html %}
-</footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
