@@ -3,8 +3,8 @@
 /* 🎓 Bandeau ICPR */
 .background-image {
   background-image: image-set(
-    url("/assets/img/headerBackground.webp") type("image/webp"),
-    url("/assets/img/headerBackground.jpg") type("image/jpeg")
+    url("../img/headerBackground.webp") type("image/webp"),
+    url("../img/headerBackground.jpg") type("image/jpeg")
   );
   background-size: cover;
   background-position: center;
