@@ -90,6 +90,32 @@ Following the success of the five first éditions, we propose the 6th edition of
 </div>
 </div>
 
+  <!-- Contact information -->
+  <div class="row mt-5">
+    <div class="col-md-6 mx-auto">
+      <div class="card border-info mb-3">
+        <div class="card-header text-center">Contact information and social media</div>
+        <div class="card-body text-center ">
+          e-mail: <a href="mailto:rrpr_workshop@icpr2026.org">rrpr_workshop@icpr2026.org</a>
+     <div class="card-body text-center ">
+         
+             Follow us on&nbsp;</span><a href="https://twitter.com/RRPR_Workshop"><img style="display: block; margin-left: auto; margin-right: auto;" title="twitter" src="{{ '/assets/img/logoX.png' | relative_url }}" alt="X" height="50" /></a>                          
+         
+
+           
+         
+         </div>
+
+         
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+
+
+  
 <h2>Sponsors and Endorsements</h2>
 
 
@@ -99,3 +125,41 @@ The list of sponsors will be given here.
 
 <p style="text-align: center;"><a href="http://iapr-tc22.org"><img title="logoTC22" src="{{ '/assets/img/logoTC22.png' | relative_url }}" alt="logoTC22"  height="120" /></a></p>
 
+
+
+
+<div class="row">
+  <div class="col-12 text-center my-3">
+    <div class="visits-block">
+      👁️ <span id="visits-count24h" title="last 24h visits">...</span> (24h)
+    </div>
+
+    <div class="visits-block">
+      👁️ <span id="visits-count7d" title="last 7 days visits">...</span> (7 days)
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+(async function() {
+  const siteId = "96da01bb-0162-407e-88a0-03d3e2fe0465"; 
+  const url = window.location.pathname;
+  try {
+    const response7d = await fetch(`https://livelightning.ddnsfree.com/visitsrrpr?range=7d`);
+    const data = await response7d.json();
+    const views = data.visits ?? "N/A";
+    document.getElementById("visits-count7d").textContent = views;
+
+    const response24h = await fetch(`https://livelightning.ddnsfree.com/visitsrrpr?range=24h`);
+    const data24h = await response24h.json();
+    const views24h = data24h.visits ?? "N/A";
+    document.getElementById("visits-count24h").textContent = views24h;
+  } catch (error) {
+    console.error("Erreur compteur Umami :", error);
+    document.getElementById("visits-count7d").textContent = "N/A";
+    document.getElementById("visits-count24h").textContent = "N/A";
+  }
+})();
+</script>
